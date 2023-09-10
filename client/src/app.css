@@ -16,6 +16,7 @@
 
 .centered-title h1 {
     font-size: 24px;
+    padding-top: 50%;
 }
 
 .centered-title h2 {
@@ -54,4 +55,31 @@ select {
 
 select option[value=""] {
     color: #888;
+}
+#navTitle {
+    font-family: 'Bruno Ace', cursive;
+    font-family: 'Bruno Ace SC', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Qwitcher Grypen', cursive;
+}
+
+.navbar {
+    border-bottom: 10px solid #a9d5e9;
+    position: fixed;
+    top: 100;
+    width: 100%;
+    background-color: rgba(16, 78, 223, 0.504);
+    z-index: 1000;
+}
+
+.navChoice {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navChoice:hover {
+    color: yellow;
+    text-decoration-line: overline;
+    pointer-events: stroke;
+    cursor: pointer;
 }
