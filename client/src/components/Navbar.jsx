@@ -6,17 +6,17 @@ export default function Nav() {
         <NavUI
             links={[
                 <Link className="nav-link  inline-block navChoice text-light" to="/" key={1} smooth={true} duration={50} spy={true}>
-                    nav1
+                    Find Notes
                 </Link>,
                 <Link className="nav-link inline-block navChoice text-light" to="/" key={3} smooth={true} duration={50}>
-                    nav2
+                Submit Notes
                 </Link>,
 
                 <Link className="nav-link inline-block navChoice text-light " to="/" key={2} smooth={true} duration={50} spy={true}>
-                    nav3
+                    My Cart
                 </Link>,
                 <Link className="nav-link inline-block navChoice text-light" to="/" key={4} smooth={true} duration={50}>
-                    nav4
+                    About Us
                 </Link>,
             ]}
         />
