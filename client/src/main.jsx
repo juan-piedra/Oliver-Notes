@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SearchClass from "./pages/SearchClass";
 import App from './App.jsx'
+import DisplayNotes from "./pages/displayNotes";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -11,7 +12,11 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true, element: <SearchClass />
-            }
+            },
+            {
+                path: '/notes/demonstrate',
+                element: <DisplayNotes />
+            },
         ]
     }
 ])
