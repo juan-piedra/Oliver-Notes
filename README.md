@@ -1,7 +1,7 @@
 # Oliver-Notes
 
 ## General Information
-
+Notes here
 
 ## Technologies Used
 
