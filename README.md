@@ -1,6 +1,7 @@
 # Oliver-Notes
 
-## General Information
+## Description
+
 Notes here
 
 ## Technologies Used
