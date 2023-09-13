@@ -21,6 +21,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 7
     },
+    
     userNotes: [NoteSchema],
     purchasedNotes: [NoteSchema],
     userVotes: [VoteSchema]
