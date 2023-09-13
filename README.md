@@ -2,8 +2,7 @@
 
 ## Description
 
-Users can purchase notes from an account they have created after logging into our app.  Each user will pay per note they purchase. 
-Each user can purchase as many notes as they want, but each note is a seperate payment even if it is from the same person who created the note.
+Oliver Notes is a premium crowdsourcing service for college students looking to make some extra cash by selling their notes and those who want to buy notes for courses at their university. Inspired by much-ballyhooed film director Oliver Stone ("Notes" is an anagram), students seeking to find notes will see results based on an upvote/downvote system. Those who wish to sell their notes will upload images and then when their notes get bought, they'll get paid on Any Given Sunday.
 
 ## Technologies Used
 
@@ -36,6 +35,8 @@ Each user can purchase as many notes as they want, but each note is a seperate p
 
 ## Information
 
+Users can purchase notes from an account they have created after logging into our app.  Each user will pay per note they purchase. 
+Each user can purchase as many notes as they want, but each note is a seperate payment even if it is from the same person who created the note.
 
 ## Usage
 
