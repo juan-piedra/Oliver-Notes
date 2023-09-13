@@ -1,7 +1,6 @@
 const { Schema, model } = require('mongoose');
 const commentSchema = require('./Comment');
-const UserSchema = require('./User')
-
+const userSchema = require('./User')
 const noteSchema = new Schema({
     price: {
         type: Number,
@@ -11,8 +10,11 @@ const noteSchema = new Schema({
         required: true,
     },
     comments: [commentSchema],
-    publisher: UserSchema,
-    purchasers: [UserSchema],
+    publisher: userSchema,
+    purchasers: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }],
     uploadDate: { type: Date, default: Date.now },
     voteCount: { type: Number }
 });
