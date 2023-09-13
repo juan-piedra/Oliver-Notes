@@ -1,7 +1,7 @@
 const { Schema } = require('mongoose');
 
 // This is a subdocument schema, it won't become its own model but we'll use it as the schema for the User's `savedBooks` array in User.js
-const voteSchema = new Schema({
+const VoteSchema = new Schema({
     voteStatus: {
         type: Number,
         default: 0,
@@ -15,4 +15,4 @@ const voteSchema = new Schema({
     },
 });
 
-module.exports = voteSchema;
+module.exports = VoteSchema;

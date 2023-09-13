@@ -17,7 +17,8 @@ const typeDefs = `
  
   type Class {
     _id: ID
-    schoolID: ID! 
+    associatedSchool: School 
+    className: String
     notes: [Note]
   }
   type Note {
@@ -25,16 +26,18 @@ const typeDefs = `
     price: Float
     pdf: String 
     comments: [Comment]
-    publisherId: ID!
-    purchasers: [ID]
+    publisher: User
+    purchasers: [User]
     uploadDate: String
     voteCount: Int
+    Comments:
   }
   type Comment {
     _id: ID
-    notesId: ID!
+    commentedNotes: Note
     text: String
     uploadDate: String
+    commentedUser: User
   }
   type Votes {
     _id: ID
@@ -57,6 +60,8 @@ const typeDefs = `
     school(_id: ID!): School
     class(_id: ID!): Class
     note(_id: ID!): Note
+    publisher: User
+    commentedUser: User
 }
 
   type Mutation {
