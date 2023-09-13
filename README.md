@@ -2,7 +2,8 @@
 
 ## Description
 
-Notes here
+Users can purchase notes from an account they have created after logging into our app.  Each user will pay per note they purchase. 
+Each user can purchase as many notes as they want, but each note is a seperate payment even if it is from the same person who created the note.
 
 ## Technologies Used
 
