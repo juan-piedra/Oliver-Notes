@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const commentSchema = require('./Comment');
 const User = require('./User')
 const noteSchema = new Schema({
     price: {
@@ -9,13 +8,18 @@ const noteSchema = new Schema({
         type: String,
         required: true,
     },
+    classId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Class'
+    },
     comments: [{
         text: {
             type: String, required: true, minlength: 1, maxlength: 280
         },
 
         uploadDate: {
-            type: Date, default: Date.now,
+            type: Date,
+            default: Date.now,
         },
         commentedUser: {
             type: Schema.Types.ObjectId,
@@ -32,7 +36,6 @@ const noteSchema = new Schema({
         ref: 'User'
     }],
     uploadDate: { type: Date, default: Date.now },
-    voteCount: { type: Number }
 });
 
 const Note = model('Note', noteSchema);
