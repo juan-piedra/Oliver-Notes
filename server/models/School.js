@@ -6,7 +6,10 @@ const schoolSchema = new Schema({
         type: String,
         required: true
     },
-    classes: [Class],
+    classes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Class'
+    }],
 });
 
 const School = model('School', schoolSchema);

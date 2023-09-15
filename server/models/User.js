@@ -19,11 +19,6 @@ const userSchema = new Schema({
         required: true,
         minlength: 7
     },
-
-    userNotes: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Note'
-    }],
     purchasedNotes: [{
         type: Schema.Types.ObjectId,
         ref: 'Note'
