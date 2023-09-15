@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/juan-piedra/Oliver-Notes/issues"
   },
-  "homepage": "https://github.com/juan-piedra/Oliver-Notes#readme"
+  "homepage": "https://github.com/juan-piedra/Oliver-Notes#readme",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
 }
