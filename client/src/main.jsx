@@ -2,7 +2,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchClass from "./pages/SearchClass";
-import Login from "./pages/Landing/Landing";
+import Landing from "./pages/Landing/Landing";
+import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
 import App from "./App.jsx";
 import DisplayNotes from "./pages/displayNotes";
 const router = createBrowserRouter([
