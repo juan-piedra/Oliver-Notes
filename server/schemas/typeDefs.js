@@ -10,8 +10,7 @@ const typeDefs = `
   }
   type School {
     _id: ID
-    schoolName: String
-    state: String
+    schoolName: 
     classes: [Class]
   }
  
@@ -29,8 +28,6 @@ const typeDefs = `
     publisher: User
     purchasers: [User]
     uploadDate: String
-    voteCount: Int
-    Comments:
   }
   type Comment {
     _id: ID
@@ -39,11 +36,6 @@ const typeDefs = `
     uploadDate: String
     commentedUser: User
   }
-  type Votes {
-    _id: ID
-    voteStatus: Int
-    noteId: ID!
-  }
 
   type Auth {
     token: ID!
@@ -51,17 +43,9 @@ const typeDefs = `
   }
 
   type Query {
-    userNotes: [Note]
-    purchasedNotes: [Note]
-    userVotes: [Votes]
-    notes: [Note]
-    comments: [Comment]
-    user: User
-    school(_id: ID!): School
-    class(_id: ID!): Class
-    note(_id: ID!): Note
-    publisher: User
-    commentedUser: User
+    schools: [School]
+    note(noteId: ID!): Note
+    addComment(noteId: ID!): Note
 }
 
   type Mutation {

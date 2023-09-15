@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const NoteSchema = require('./Note')
+const Note = require('./Note')
 const VoteSchema = require('./Vote')
 
 const userSchema = new Schema({
@@ -21,9 +21,9 @@ const userSchema = new Schema({
         required: true,
         minlength: 7
     },
-    
-    userNotes: [NoteSchema],
-    purchasedNotes: [NoteSchema],
+
+    userNotes: [Note],
+    purchasedNotes: [Note],
     userVotes: [VoteSchema]
 });
 

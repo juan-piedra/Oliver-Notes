@@ -1,15 +1,15 @@
 const { Schema, model } = require('mongoose');
-const schoolSchema = require('./School');
-const noteSchema = require('./Note')
+const School = require('./School');
+const note = require('./Note')
 
 
 const classSchema = new Schema({
-    associatedSchool: schoolSchema,
+    associatedSchool: School,
     className: {
         type: String,
         required: true
     },
-    notes: [noteSchema]
+    notes: [note]
 });
 
 const Class = model('Class', classSchema);
