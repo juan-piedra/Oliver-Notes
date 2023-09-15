@@ -4,7 +4,7 @@
   "description": "## General Information",
   "main": "index.js",
   "engines": {
-    "v16.20.0"
+    "node": "v16.20.0"
   },
   "scripts": {
     "build": "concurrently \"cd client && npm i\" \"cd server && npm i\"",
