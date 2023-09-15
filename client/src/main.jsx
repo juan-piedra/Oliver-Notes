@@ -5,8 +5,8 @@ import SearchClass from "./pages/SearchClass";
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
-import App from "./App.jsx";
 import DisplayNotes from "./pages/displayNotes";
+import App from "./App.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,19 +15,23 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Login />,
+        element: <Landing />,
       },
       {
-        path: "/notes/demonstrate",
+        path: "/displayNotes",
         element: <DisplayNotes />,
       },
       {
-        path: '/landingpage',
+        path: '/Landing',
         element: <Landing />,
       },
       {
         path: '/SignUp',
         element: <SignUp />,
+      },
+      {
+        path: '/Login',
+        element: <Login />,
       },
     ],
   },
