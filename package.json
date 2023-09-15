@@ -7,8 +7,7 @@
     "node": "v16.20.0"
   },
   "scripts": {
-    "build": "concurrently \"cd client && npm i\" \"cd server && npm i\"",
-    "start": "cd client && npm run dev",
+    "start": "concurrently \"cd client && npm i\" \"cd server && npm i\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
