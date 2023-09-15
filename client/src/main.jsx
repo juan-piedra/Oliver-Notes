@@ -21,6 +21,14 @@ const router = createBrowserRouter([
         path: "/notes/demonstrate",
         element: <DisplayNotes />,
       },
+      {
+        path: '/landingpage',
+        element: <Landing />,
+      },
+      {
+        path: '/SignUp',
+        element: <SignUp />,
+      },
     ],
   },
 ]);
