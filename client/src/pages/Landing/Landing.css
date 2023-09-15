@@ -102,5 +102,7 @@ body {
 }
 
 .bottom-half p {
-    max-width: 800px;
+    max-width: 1000px;
+    font-size: 1.5em;
+    text-align: center;
 }

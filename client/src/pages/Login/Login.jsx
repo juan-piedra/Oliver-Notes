@@ -1,4 +1,5 @@
 import '../Login/Login.css'
+import { Link, useLocation } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -19,7 +20,9 @@ const Login = () => {
               Sign In
             </button>
           </form>
-          <p>Don't have an account?</p>
+          <Link to="/SignUp">
+            <p>Don't have an account?</p>
+          </Link>
         </div>
       </div>
     </body>
