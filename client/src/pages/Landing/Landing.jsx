@@ -1,3 +1,5 @@
+import ReactDOM from "react-dom/client";
+import { Link } from "react-router-dom";
 import "./Landing.css";
 
 const Login = () => {
@@ -8,7 +10,8 @@ const Login = () => {
           <div class="main">
             <div class="main-container">
               <h2>Oliver Notes</h2>
-              <button class="main-signup-btn">Sign Up/Login</button>
+              <Link to='/Login'>
+              <button class="main-signup-btn">Sign Up/Login</button></Link>
             </div>
           </div>
         </div>
