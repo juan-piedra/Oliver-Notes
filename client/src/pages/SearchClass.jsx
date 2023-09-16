@@ -1,10 +1,12 @@
 import React from 'react';
 import conanTheLibrarian from "../utils/conan-the-librarian.jpg";
 import oliverStoneCaricature from "../utils/oliver-stone-caricature.jpg";
+import Navbar from '../components/Navbar';
 
 const SearchClass = () => {
     return (
-        <div className="pt-5">
+        <div>
+            <Navbar></Navbar>
             <div className="pt-5">
                 <div className="app-container">
                     <div className="centered-title">
