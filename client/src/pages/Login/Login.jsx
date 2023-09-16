@@ -2,12 +2,16 @@ import '../Login/Login.css'
 import { Link, useLocation } from 'react-router-dom';
 
 const Login = () => {
+  const handleForm = (event) => {
+    event.preventDefault()
+    console.log(event)
+  }
   return (
     <body>
       <div class="background-container">
         <div class="login-container">
           <h2 class="login-title">Login</h2>
-          <form>
+          <form onSubmit={handleForm}>
             <div class="input-group">
               <label>Email:</label>
               <input type="email" />
