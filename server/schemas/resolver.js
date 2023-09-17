@@ -1,21 +1,39 @@
-const { Class, Note, School, User } = require('../models');
+const { Note, School, User } = require('../models');
+const { create } = require('../models/School');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
     Query: {
         schools: async () => {
-            return School.find();
+            return School.find({})
+                .populate('classes')
+                .populate({ path: 'classes', populate: { path: "notes", populate: 'publisher' } })
+                .populate({
+                    path: 'classes', populate: {
+                        path: "notes", populate: { path: "comments", populate: "commentedUser" }
+                    }
+                })
         },
         note: async (parent, { noteId }) => {
             return Note.findOne({ _id: noteId })
+                .populate({ path: 'comments', populate: { path: "commentedUser" } })
+                .populate({ path: 'publisher' })
         },
-        Classes: async (parent, { associatedSchoolId }) => {
+        Classes: async (parent, { SchoolId }) => {
             try {
-                const classes = await Class.find({ associatedSchoolId: associatedSchoolId })
+                const classes = await School.findOne({ _id: SchoolId })
+                    .populate('classes')
+                    .populate({ path: 'classes', populate: { path: "notes", populate: 'publisher' } })
                 return classes
             } catch (error) {
                 throw new Error('Error fetching classes: ' + error)
             }
+        },
+        Me: async (parents, args, context) => {
+            if (context.user) {
+                return User.findOne({ _id: context.user._id })
+            }
+            throw AuthenticationError
         }
     },
     Mutation: {
@@ -30,7 +48,7 @@ const resolvers = {
             if (!user) {
                 throw AuthenticationError
             }
-            const correctPassword = await User.isCorrectPassword(password)
+            const correctPassword = await user.isCorrectPassword(password)
             if (!correctPassword) {
                 throw AuthenticationError
             }
@@ -56,21 +74,50 @@ const resolvers = {
             }
 
         },
-        uploadNote: async (parent, { publisher, pdf, price, classId }) => {
-            const user = await User.findOne({ _id: publisher });
-            const findClass = await Class.findOne({ _id: classId });
+        uploadNote: async (parent, { publisher, pdf, price, classId, schoolId }) => {
             try {
+                const user = await User.findOne({ _id: publisher });
                 if (!user) {
-                    return new Error('no user found')
+                    throw new Error('No user found');
+                }
+                const school = await School.findOne({ _id: schoolId })
+                if (!school) {
+                    new Error('No School found');
                 }
 
-                if (!findClass) {
-                    return new Error('no class found')
+                const targetClass = school.classes.find(classItem => classItem._id.toString() === classId);
+                if (!targetClass) {
+                    throw new Error('Class not found in the school');
                 }
-                const createNote = await Note.create({ publisher, pdf, price, classId })
-                return createNote
+                const createNote = await Note.create({
+                    publisher,
+                    pdf,
+                    price,
+                    classId,
+                });
+                targetClass.notes.push(createNote);
+                await school.save();
+                return createNote;
             } catch (error) {
                 throw new Error('Error uploading Note:' + error)
+            }
+        },
+        addClass: async (parent, { schoolId, className }) => {
+            try {
+                const findSchool = await School.findOne({ _id: schoolId })
+                if (!findSchool) {
+                    return new Error('no school found')
+                }
+                const newClass = {
+                    className,
+                    note: []
+                }
+                findSchool.classes.push(newClass);
+                await findSchool.save()
+                return findSchool;
+            } catch (error) {
+                throw new Error('Error uploading class:' + error)
+
             }
         }
     }

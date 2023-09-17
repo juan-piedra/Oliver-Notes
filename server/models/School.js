@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const Class = require('./Class');
+// const classSchema = require('./Class');
 
 const schoolSchema = new Schema({
     schoolName: {
@@ -7,8 +7,11 @@ const schoolSchema = new Schema({
         required: true
     },
     classes: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Class'
+        className: { type: String },
+        notes: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Note'
+        }]
     }],
 });
 

@@ -1,20 +1,16 @@
 const { Schema, model } = require('mongoose');
-const User = require('./User')
+// const classSchema = require('./Class')
 const noteSchema = new Schema({
     price: {
         type: Number,
     },
     pdf: {
-        type: String,
+        type: String, 
         required: true,
-    },
-    classId: {
-        type: Schema.Types.ObjectId,
-        ref: 'Class'
     },
     comments: [{
         text: {
-            type: String, required: true, minlength: 1, maxlength: 280
+            type: String, minlength: 1, maxlength: 280
         },
 
         uploadDate: {

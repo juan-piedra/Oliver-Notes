@@ -3,8 +3,6 @@ const typeDefs = `
     _id: ID
     username: String
     email: String
-    password: String
-    userNotes: [Note]
     purchasedNotes: [Note]
   }
   type School {
@@ -15,7 +13,6 @@ const typeDefs = `
  
   type Class {
     _id: ID
-    associatedSchoolId: ID 
     className: String
     notes: [Note]
   }
@@ -23,7 +20,6 @@ const typeDefs = `
     _id: ID
     price: Int
     pdf: String 
-    classId: ID
     comments: [Comment]
     publisher: User
     purchasers: [User]
@@ -45,15 +41,16 @@ const typeDefs = `
   type Query {
     schools: [School]
     note(noteId: ID!): Note
-    Classes(associatedSchoolId: ID!): [Class]
-   
+    Classes(SchoolId: ID!): School
+    Me: User
 }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addComment(noteId: ID!, commentedUser: ID!, text: String! ): Note
-    uploadNote(price: Int!, pdf: String!, publisher: ID!, classId: ID!): Note
+    uploadNote(price: Int!, pdf: String!, publisher: ID!, classId: ID!, schoolId: ID!): Note
+    addClass(schoolId: ID!, className: String! ): School
   }
 `;
 
