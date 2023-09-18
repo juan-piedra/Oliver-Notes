@@ -1,4 +1,5 @@
 import "./Search.css";
+import { Link, useLocation } from 'react-router-dom';
 
 const Search = () => {
   return (
@@ -18,7 +19,7 @@ const Search = () => {
             <div class="search-container">
               <select
                 id="schoolVal"
-                class="form-select"
+                class="search form-select"
                 aria-label="Default select example"
               >
                 <option selected>Select school</option>
@@ -30,7 +31,7 @@ const Search = () => {
             <div class="search-container">
               <select
                 id="classVal"
-                class="form-select"
+                class="search form-select"
                 aria-label="Default select example"
               >
                 <option selected>Select class</option>
@@ -39,7 +40,7 @@ const Search = () => {
                 <option value="3">Class 3</option>
               </select>
             </div>
-            <button>Can't find your class?</button>
+            <Link to='/AddClass'><button>Can't find your class?</button></Link>
           </section>
           <section class="search-right-side">
             <button class="search-btn">Show Me The Notes!</button>

@@ -1,5 +1,6 @@
 .notes-body {
     background-color: #9ddcd3;
+    height: 100vh;
 }
 
 .nav {
@@ -31,7 +32,6 @@
 }
 
 .notes-note-container {
-    border: 1px solid black;
     height: 25vh;
     display: flex;
     align-items: center;
