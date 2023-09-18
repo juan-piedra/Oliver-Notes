@@ -7,6 +7,7 @@ const AddClass = () => {
       <nav class="nav">
         <div class="nav-title">
           <h1>Oliver Notes</h1>
+          <p> / Add Class</p>
         </div>
         <div class="user-items">
           <ul>
@@ -17,9 +18,9 @@ const AddClass = () => {
       <div class="addClass-wrapper">
           <section class="addClass-container">
             <div class="addClass-title">
-              <h2>Add Class</h2>
+              <h2>Add a Class!</h2>
             </div>
-            <form>
+            <form class='addClass-form'>
               <select class="addClass form-select" aria-label="Default select example">
                 <option selected>Select school</option>
                 <option value="1">School 1</option>

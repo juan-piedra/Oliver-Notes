@@ -1,3 +1,41 @@
+.nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #00566b;
+}
+
+.nav-title {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-title p {
+    margin: 0 0 0 1rem;
+    padding: 0;
+    font-size: 2.1em;
+    color: #212121c3;
+}
+
+.nav-title h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.user-items ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 7vw;
+}
+
 .search-main {
     display: flex;
     background-color: #9ddcd3;
