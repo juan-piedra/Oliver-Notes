@@ -1,0 +1,48 @@
+.nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #00566b;
+}
+
+.nav-title {
+    margin: 1rem;
+}
+
+.nav-title h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.user-items ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 7vw;
+}
+
+.addClass-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    background-color: #9ddcd3;
+}
+
+.addClass.form-select {
+    width: 30vw;
+}
+
+.addClass-title {
+    margin-top: 25vh;
+}
+
+.addClass-back-btn {
+    margin-top: 5rem;
+}

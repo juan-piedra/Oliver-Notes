@@ -23,7 +23,7 @@ const Login = () => {
               Sign In
             </button>
           </form>
-          <Link to="/SignUp">
+          <Link style={{textDecoration: 'none'}} to="/SignUp">
             <p>Don't have an account?</p>
           </Link>
         </div>

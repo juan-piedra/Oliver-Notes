@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
-import DisplayNotes from "./pages/displayNotes";
 import Search from "./pages/Search/Search";
 import Notes from "./pages/Notes/Notes";
+import AddClass from "./pages/AddClass/AddClass";
 import App from "./App.jsx";
 const router = createBrowserRouter([
   {
@@ -16,11 +16,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <SignUp />,
+        element: <Search />,
       },
       {
-        path: "/displayNotes",
-        element: <DisplayNotes />,
+        path: "/Notes",
+        element: <Notes />,
       },
       {
         path: "/Landing",
@@ -33,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: "/Login",
         element: <Login />,
+      },
+      {
+        path: "/Search",
+        element: <Search />,
+      },
+      {
+        path: "/AddClass",
+        element: <AddClass />,
       },
     ],
   },
