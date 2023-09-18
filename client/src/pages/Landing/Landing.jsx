@@ -10,7 +10,7 @@ const Landing = () => {
             <div class="landing-main-container">
               <h2>Oliver Notes</h2>
               <Link to='/Login'>
-              <button class="landing-main-signup-btn">Sign Up/Login</button></Link>
+              <button class="landing-main-signup-btn">Sign Up / Login</button></Link>
             </div>
           </div>
         </div>
