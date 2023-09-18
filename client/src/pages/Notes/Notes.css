@@ -1,0 +1,121 @@
+.notes-body {
+    background-color: #9ddcd3;
+}
+
+.nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #00566b;
+}
+
+.nav-title {
+    margin: 1rem;
+}
+
+.nav-title h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.user-items ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 7vw;
+}
+
+.notes-note-container {
+    border: 1px solid black;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+}
+
+.notes-img-container {
+    border: 1px solid black;
+    height: 20vh;
+    width: 10vw;
+    margin-left: 1rem;
+}
+
+.notes-img-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.notes-information-container {
+    border: 1px solid black;
+    height: 20vh;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.notes-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notes-title {
+    font-weight: bolder;
+    font-size: 2em;
+    margin: 1rem;
+}
+
+.notes-author {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 1rem;
+}
+
+.notes-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+
+.notes-price-container {
+    border: 1px solid black;
+    height: 20vh;
+    width: 15vw;
+    margin-right: 1rem;
+}
+
+.notes-description {
+    padding: 1em;
+}
+
+.notes-price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notes-price {
+    margin: 2rem;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.notes-buy-now-btn {
+    background-color: #ffffff;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
+.notes-buy-now-btn:hover {
+    background-color: #d7d7d7;
+}

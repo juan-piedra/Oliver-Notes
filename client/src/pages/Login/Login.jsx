@@ -7,18 +7,17 @@ const Login = () => {
     console.log(event)
   }
   return (
-    <body>
-      <div class="background-container">
+      <div class="login-background-container">
         <div class="login-container">
           <h2 class="login-title">Login</h2>
           <form onSubmit={handleForm}>
-            <div class="input-group">
+            <div class="login-input-group">
               <label>Email:</label>
               <input type="email" />
             </div>
-            <div class="input-group">
+            <div class="login-input-group">
               <label>Password:</label>
-              <input type="password" />
+              <input type="login-password" />
             </div>
             <button type="submit" class="login-btn">
               Sign In
@@ -29,7 +28,6 @@ const Login = () => {
           </Link>
         </div>
       </div>
-    </body>
   );
 };
 
