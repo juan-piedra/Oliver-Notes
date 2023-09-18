@@ -7,6 +7,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Search from "./pages/Search/Search";
 import Notes from "./pages/Notes/Notes";
 import AddClass from "./pages/AddClass/AddClass";
+import UserNotes from "./pages/UserNotes/UserNotes";
 import App from "./App.jsx";
 const router = createBrowserRouter([
   {
@@ -16,14 +17,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Search />,
-      },
-      {
-        path: "/Notes",
-        element: <Notes />,
-      },
-      {
-        path: "/Landing",
         element: <Landing />,
       },
       {
@@ -35,12 +28,20 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
+        path: "/Notes",
+        element: <Notes />,
+      },
+      {
         path: "/Search",
         element: <Search />,
       },
       {
         path: "/AddClass",
         element: <AddClass />,
+      },
+      {
+        path: "/UserNotes",
+        element: <UserNotes />,
       },
     ],
   },

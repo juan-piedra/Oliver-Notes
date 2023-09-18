@@ -74,5 +74,5 @@
     color: blue;
     text-decoration: underline;
     cursor: pointer;
-    min-width: 35%;
+    width: 11rem;
 }

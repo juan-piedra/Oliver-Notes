@@ -5,12 +5,14 @@ const Search = () => {
   return (
       <>
         <nav class="nav">
-          <div class="title">
+          <div class="nav-title">
             <h1>Oliver Notes</h1>
+            <p> / Search</p>
           </div>
           <div class="user-items">
             <ul>
-              <li>1</li>
+              <li>My Notes</li>
+              <li>Log Out</li>
             </ul>
           </div>
         </nav>

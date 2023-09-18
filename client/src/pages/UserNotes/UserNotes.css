@@ -1,6 +1,13 @@
-.notes-body {
-    background-color: #9ddcd3;
+* {
+    box-sizing: border-box;
+}
+
+.userNotes-body {
+    margin: 0;
+    width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    background-color: #9ddcd3;
 }
 
 .nav {
@@ -41,25 +48,26 @@
     width: 7vw;
 }
 
-.notes-note-container {
+.userNotes-container {
+    border: 1px solid black;
     height: 25vh;
     display: flex;
     align-items: center;
 }
 
-.notes-img-container {
+.userNotes-img-container {
     border: 1px solid black;
     height: 20vh;
     width: 10vw;
     margin-left: 1rem;
 }
 
-.notes-img-container img {
+.userNotes-img-container img {
     height: 100%;
     width: 100%;
 }
 
-.notes-information-container {
+.userNotes-information-container {
     border: 1px solid black;
     height: 20vh;
     width: 75vw;
@@ -68,56 +76,48 @@
     overflow: hidden;
 }
 
-.notes-top {
+.userNotes-top {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.notes-title {
+.userNotes-title {
     font-weight: bolder;
     font-size: 2em;
     margin: 1rem;
 }
 
-.notes-author {
+.userNotes-author {
     font-weight: bold;
     font-size: 1.5em;
     margin: 1rem;
 }
 
-.notes-bottom {
+.userNotes-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 15vh;
 }
 
-.notes-price-container {
+.userNotes-description {
+    margin: 1em;
+}
+
+.userNotes-open-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
     height: 20vh;
     width: 15vw;
     margin-right: 1rem;
 }
 
-.notes-description {
-    padding: 1em;
-}
-
-.notes-price-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.notes-price {
-    margin: 2rem;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.notes-buy-now-btn {
+.userNotes-open-btn {
     background-color: #ffffff;
     border: 0.5px solid black;
     border-radius: 5px;
@@ -126,6 +126,6 @@
     cursor: pointer;
 }
 
-.notes-buy-now-btn:hover {
+.userNotes-open-btn:hover {
     background-color: #d7d7d7;
 }

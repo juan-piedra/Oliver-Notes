@@ -1,13 +1,13 @@
-import "../Notes/Notes.css";
+import "../UserNotes/UserNotes.css";
 import notePNG from "./assets/notepng.png";
 
-const Notes = () => {
+const UserNotes = () => {
   return (
-    <body class="notes-body">
+    <body class="userNotes-body">
       <nav class="nav">
         <div class="nav-title">
           <h1>Oliver Notes</h1>
-          <p> / Notes</p>
+          <p> / My Notes</p>
         </div>
         <div class="user-items">
           <ul>
@@ -15,18 +15,18 @@ const Notes = () => {
           </ul>
         </div>
       </nav>
-      <div class="notes-main">
-        <section class="notes-note-container">
-          <div class="notes-img-container">
+      <div class="userNotes-main">
+        <section class="userNotes-container">
+          <div class="userNotes-img-container">
             <img src={notePNG} alt="note picture" />
           </div>
-          <div class="notes-information-container">
-            <div class="notes-top">
-              <div class="notes-title">Very Good Notes</div>
-              <div class="notes-author">by John Doe</div>
+          <div class="userNotes-information-container">
+            <div class="userNotes-top">
+              <div class="userNotes-title">Very Good Notes</div>
+              <div class="userNotes-author">by John Doe</div>
             </div>
-            <div class="notes-bottom">
-              <div class="notes-description">
+            <div class="userNotes-bottom">
+              <div class="userNotes-description">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
                 nam esse laboriosam totam ut, similique omnis natus officiis
                 deserunt cumque minus magnam accusantium molestiae. Accusamus
@@ -37,9 +37,8 @@ const Notes = () => {
               </div>
             </div>
           </div>
-          <div class="notes-price-container">
-            <div class="notes-price">$4.99</div>
-            <button class="notes-buy-now-btn">Buy Now!</button>
+          <div class="userNotes-open-container">
+            <button class="userNotes-open-btn">Open</button>
           </div>
         </section>
       </div>
@@ -47,4 +46,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default UserNotes;
