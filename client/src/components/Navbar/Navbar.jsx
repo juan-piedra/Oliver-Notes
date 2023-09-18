@@ -1,15 +1,19 @@
 import '../Navbar/Navbar.css'
+import { Link } from 'react-router-dom';
+import AddClass from '../../pages/AddClass/AddClass';
+import Notes from '../../pages/Notes/Notes';
+import Auth from '../../utils/Auth';
+
 
 const Navbar = () => {
   return (
     <nav class="nav">
       <div class="nav-title">
         <h1>Oliver Notes</h1>
-        <p> / Add Class</p>
       </div>
       <div class="user-items">
         <ul>
-          <li>1</li>
+          <button onClick={Auth.logout}>Logout</button>
         </ul>
       </div>
     </nav>

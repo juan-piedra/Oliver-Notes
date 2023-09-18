@@ -28,12 +28,12 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/Notes",
-        element: <Notes />,
-      },
-      {
         path: "/Search",
         element: <Search />,
+      },
+      {
+        path: "/Notes",
+        element: <Notes />,
       },
       {
         path: "/AddClass",
@@ -42,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/UserNotes",
         element: <UserNotes />,
+      },
+      {
+        path: "/Landing",
+        element: <Landing />,
       },
     ],
   },
