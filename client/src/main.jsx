@@ -8,6 +8,7 @@ import Search from "./pages/Search/Search";
 import Notes from "./pages/Notes/Notes";
 import AddClass from "./pages/AddClass/AddClass";
 import UserNotes from "./pages/UserNotes/UserNotes";
+import SingleNote from "./pages/SingleNote/SingleNote";
 import App from "./App.jsx";
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Landing />,
+        element: <SingleNote />,
       },
       {
         path: "/SignUp",
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/Landing",
         element: <Landing />,
+      },
+      {
+        path: "/SingleNote",
+        element: <SingleNote />,
       },
     ],
   },
