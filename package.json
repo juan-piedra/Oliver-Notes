@@ -9,8 +9,8 @@
   "scripts": {
     "start": "concurrently \"cd client && npm i && npm run dev\" \"cd server && npm i && npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "cd server && npm run seed"
-
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
