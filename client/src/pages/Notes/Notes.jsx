@@ -10,20 +10,20 @@ const Notes = () => {
   return (
     <>
       {Auth.loggedIn() ? (
-        <body class="notes-body">
+        <body className="notes-body">
           {(window.currentLocation = "/Notes" ? <Navbar /> : null)}
-          <div class="notes-main">
-            <section class="notes-note-container">
-              <div class="notes-img-container">
+          <div className="notes-main">
+            <section className="notes-note-container">
+              <div className="notes-img-container">
                 <img src={notePNG} alt="note picture" />
               </div>
-              <div class="notes-information-container">
-                <div class="notes-top">
-                  <div class="notes-title">Very Good Notes</div>
-                  <div class="notes-author">by John Doe</div>
+              <div className="notes-information-container">
+                <div className="notes-top">
+                  <div className="notes-title">Very Good Notes</div>
+                  <div className="notes-author">by John Doe</div>
                 </div>
-                <div class="notes-bottom">
-                  <div class="notes-description">
+                <div className="notes-bottom">
+                  <div className="notes-description">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Odit nam esse laboriosam totam ut, similique omnis natus
                     officiis deserunt cumque minus magnam accusantium molestiae.
@@ -34,9 +34,9 @@ const Notes = () => {
                   </div>
                 </div>
               </div>
-              <div class="notes-price-container">
-                <div class="notes-price">$4.99</div>
-                <button class="notes-buy-now-btn">Buy Now!</button>
+              <div className="notes-price-container">
+                <div className="notes-price">$4.99</div>
+                <button className="notes-buy-now-btn">Buy Now!</button>
               </div>
             </section>
           </div>
