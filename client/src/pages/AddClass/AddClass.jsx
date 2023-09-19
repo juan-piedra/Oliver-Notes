@@ -2,46 +2,50 @@ import "../AddClass/AddClass.css";
 import { Link, useLocation, Navigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Auth from "../../utils/Auth";
+import { useQuery, useLazyQuery, useMutation } from "@apollo/client";
+import { QUERY_SCHOOLS, QUERY_CLASSES } from "../../utils/queries";
 
 const AddClass = () => {
   let currentLocation = useLocation();
+  const { loading, data } = useQuery(QUERY_SCHOOLS);
+  const schoolData = data?.schools || [];
 
   return (
     <>
       {Auth.loggedIn() ? (
         <body>
           {(window.currentLocation = "/AddClass" ? <Navbar /> : null)}
-          <div class="addClass-wrapper">
-            <section class="addClass-container">
-              <div class="addClass-title">
+          <div className="addClass-wrapper">
+            <section className="addClass-container">
+              <div className="addClass-title">
                 <h2>Add a Class!</h2>
               </div>
-              <form class="addClass-form">
+              <form className="addClass-form">
                 <select
-                  class="addClass form-select"
+                  className="addClass form-select"
                   aria-label="Default select example"
                 >
                   <option selected>Select school</option>
-                  <option value="1">School 1</option>
-                  <option value="2">School 2</option>
-                  <option value="3">School 3</option>
+                  {schoolData.map((school) => {
+                      return (
+                        <option value={school._id} key={school._id}>
+                          {school.schoolName}
+                        </option>
+                      );
+                    })}
                 </select>
                 <div class="my-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">
+                  <label for="exampleFormControlTextarea1" className="form-label">
                     Enter class:
                   </label>
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="1"
-                  ></textarea>
+                  <input type="text" name="className"/>
                 </div>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
               </form>
               <Link to="/Search">
-                <p class="addClass-back-btn">Go back</p>
+                <p className="addClass-back-btn">Go back</p>
               </Link>
             </section>
           </div>

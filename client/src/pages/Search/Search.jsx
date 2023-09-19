@@ -87,8 +87,6 @@ const Search = () => {
                         <option value={school._id} key={school._id}>
                           {school.schoolName}
                         </option>
-
-                  
                       );
                     })}
                   </select>

@@ -73,3 +73,15 @@ export const LOGIN_USER = gql`
         }
     }
 `
+
+export const ADD_CLASS = gql`
+    mutation addClass($schoolId: ID!, $className: String!) {
+        addClass(schoolId: $schoolId, className: $className) {
+            _id
+            classes {
+                className
+            }
+            schoolName
+        }
+    }
+`

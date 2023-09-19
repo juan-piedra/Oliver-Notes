@@ -47,3 +47,7 @@
 .addClass-form {
     padding-bottom: 4rem;
 }
+
+.my-3 input {
+    margin-left: 0.5rem;
+}

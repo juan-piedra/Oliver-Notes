@@ -46,8 +46,8 @@ const UserNotes = () => {
               </div>
               <div className="userNotes-information-container">
                 <div className="userNotes-top">
-                  <div className="userNotes-title">Very Good Notes</div>
-                  <div className="userNotes-author">by John Doe</div>
+                  <div className="userNotes-title">Extremely Good Notes</div>
+                  <div className="userNotes-author">by Jonathan Doughnut</div>
                 </div>
                 <div className="userNotes-bottom">
                   <div className="userNotes-description">
