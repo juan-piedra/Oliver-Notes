@@ -5,14 +5,18 @@ export const QUERY_SCHOOLS = gql`
         schools {
             _id
             schoolName
-            classes {
-                _id
-                className
-                notes {
-                    _id
-                    price
-                }
-            }
         }
     }
+`
+export const QUERY_CLASSES = gql`
+query Classes($schoolId: ID!) {
+    Classes(SchoolId: $schoolId) {
+      _id
+      schoolName
+      classes {
+        _id
+        className
+      }
+    }
+  }
 `
