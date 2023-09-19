@@ -8,20 +8,27 @@
     background-color: #00566b;
 }
 
-.nav-title {
-    margin: 1rem;
-}
-
 .nav-title h1 {
-    margin: 0;
     font-size: 2.5em;
+    color: black;
 }
 
-.user-items ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.user-items div {
     display: flex;
-    justify-content: space-around;
-    width: 7vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.user-items div button {
+    margin-right: 1rem;
+}
+
+.user-items div p {
+    font-size: 1.2em;
+    margin: 0 3rem 0 0;
+    padding: 0;
+    color: black;
+    cursor: pointer;
 }

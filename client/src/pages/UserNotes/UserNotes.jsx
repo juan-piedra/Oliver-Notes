@@ -35,7 +35,36 @@ const UserNotes = () => {
                 </div>
               </div>
               <div className="userNotes-open-container">
-                <button className="userNotes-open-btn">Open</button>
+                <Link to="/SingleNote">
+                  <button className="userNotes-open-btn">Open</button>
+                </Link>
+              </div>
+            </section>
+            <section className="userNotes-container">
+              <div className="userNotes-img-container">
+                <img src={notePNG} alt="note picture" />
+              </div>
+              <div className="userNotes-information-container">
+                <div className="userNotes-top">
+                  <div className="userNotes-title">Very Good Notes</div>
+                  <div className="userNotes-author">by John Doe</div>
+                </div>
+                <div className="userNotes-bottom">
+                  <div className="userNotes-description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Odit nam esse laboriosam totam ut, similique omnis natus
+                    officiis deserunt cumque minus magnam accusantium molestiae.
+                    Accusamus provident, qui ut alias cupiditate esse amet est
+                    consequuntur mollitia nemo, minima perferendis eaque sed
+                    sint laboriosam unde similique autem temporibus inventore
+                    eum repellat numquam sit tempor.
+                  </div>
+                </div>
+              </div>
+              <div className="userNotes-open-container">
+                <Link to="/SingleNote">
+                  <button className="userNotes-open-btn">Open</button>
+                </Link>
               </div>
             </section>
           </div>

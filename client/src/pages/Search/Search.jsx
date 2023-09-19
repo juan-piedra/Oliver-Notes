@@ -21,6 +21,7 @@ const Search = () => {
     QUERY_CLASSES,
     { variables: { SchoolId: formData.SchoolId } }
   );
+  console.log(classData);
 
   useEffect(() => {
     console.log("///", classData);

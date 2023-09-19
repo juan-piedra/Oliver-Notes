@@ -18,12 +18,13 @@ const typeDefs = `
   }
   type Note {
     _id: ID
-    price: Int
+    price: String
     pdf: String 
     comments: [Comment]
     publisher: User
     purchasers: [User]
     uploadDate: String
+    description: String
   }
   type Comment {
     _id: ID
@@ -49,7 +50,7 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addComment(noteId: ID!, commentedUser: ID!, text: String! ): Note
-    uploadNote(price: Int!, pdf: String!, publisher: ID!, classId: ID!, schoolId: ID!): Note
+    uploadNote(price: String!, pdf: String!, publisher: ID!, classId: ID!, schoolId: ID!): Note
     addClass(schoolId: ID!, className: String! ): School
   }
 `;

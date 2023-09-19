@@ -16,6 +16,15 @@ query Classes($schoolId: ID!) {
       classes {
         _id
         className
+        notes {
+          _id
+          price
+          publisher {
+            _id
+            username
+          }
+          description
+        }
       }
     }
   }

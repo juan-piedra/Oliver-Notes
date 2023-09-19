@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 // const classSchema = require('./Class')
 const noteSchema = new Schema({
     price: {
-        type: Number,
+        type: String
     },
     pdf: {
         type: String, 
@@ -21,7 +21,6 @@ const noteSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: 'User'
         }
-
     }],
     publisher: {
         type: Schema.Types.ObjectId,
@@ -32,6 +31,7 @@ const noteSchema = new Schema({
         ref: 'User'
     }],
     uploadDate: { type: Date, default: Date.now },
+    description: { type: String }
 });
 
 const Note = model('Note', noteSchema);

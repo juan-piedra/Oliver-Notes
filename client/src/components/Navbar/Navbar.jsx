@@ -9,12 +9,17 @@ const Navbar = () => {
   return (
     <nav class="nav">
       <div class="nav-title">
-        <h1>Oliver Notes</h1>
+        <Link to='/Search' style={{ textDecoration: 'none'}}>
+          <h1>Oliver Notes</h1>
+        </Link>
       </div>
       <div class="user-items">
-        <ul>
+        <div>
+          <Link to="/UserNotes" style={{ textDecoration: 'none' }}>
+            <p>My Notes</p>
+          </Link>
           <button onClick={Auth.logout}>Logout</button>
-        </ul>
+        </div>
       </div>
     </nav>
   );

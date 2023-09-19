@@ -49,7 +49,6 @@
 }
 
 .userNotes-container {
-    border: 1px solid black;
     height: 25vh;
     display: flex;
     align-items: center;
