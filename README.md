@@ -21,7 +21,11 @@ Oliver Notes is a premium crowdsourcing service for college students looking to 
 - POST route
 
 
-## Link
+## Links
+
+https://oliver-notes-a42fd57ba8f1.herokuapp.com/
+
+https://github.com/juan-piedra/Oliver-Notes
 
 ## Screenshot
 
