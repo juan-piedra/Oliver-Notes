@@ -17,7 +17,13 @@ const SignUp = () => {
     setFormData({ ...formData, [name]: value });
   };
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+
+    event.preventDefault(); 
+    if (formData.password.length < 7) {
+      setErrorMessage("Password must be at least 7 characters long.");
+      return; // Exit the function without making the API call
+    }
+
     try {
       const { data } = await addUser({
         variables: { ...formData },

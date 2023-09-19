@@ -1,7 +1,17 @@
 [
   {
     "schoolName": "Alabama A & M University",
-    "classes": []
+    "classes": [
+      {
+        "className": "Class 1"
+      },
+      {
+        "className": "Class 2"
+      },
+      {
+        "className": "Class 3"
+      }
+    ]
   },
   {
     "schoolName": "University of Alabama at Birmingham",

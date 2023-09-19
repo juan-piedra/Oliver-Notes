@@ -7,12 +7,12 @@ const resolvers = {
         schools: async () => {
             return await School.find({})
                 .populate('classes')
-                // .populate({ path: 'classes', populate: { path: "notes", populate: 'publisher' } })
-                // .populate({
-                //     path: 'classes', populate: {
-                //         path: "notes", populate: { path: "comments", populate: "commentedUser" }
-                //     }
-                // })
+                .populate({ path: 'classes', populate: { path: "notes", populate: 'publisher' } })
+                .populate({
+                    path: 'classes', populate: {
+                        path: "notes", populate: { path: "comments", populate: "commentedUser" }
+                    }
+                })
         },
         note: async (parent, { noteId }) => {
             return Note.findOne({ _id: noteId })

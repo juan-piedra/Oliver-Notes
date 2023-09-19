@@ -10,20 +10,20 @@ const UserNotes = () => {
   return (
     <>
       {Auth.loggedIn() ? (
-        <body class="userNotes-body">
+        <body className="userNotes-body">
           {(window.currentLocation = "/UserNotes" ? <Navbar /> : null)}
-          <div class="userNotes-main">
-            <section class="userNotes-container">
-              <div class="userNotes-img-container">
+          <div className="userNotes-main">
+            <section className="userNotes-container">
+              <div className="userNotes-img-container">
                 <img src={notePNG} alt="note picture" />
               </div>
-              <div class="userNotes-information-container">
-                <div class="userNotes-top">
-                  <div class="userNotes-title">Very Good Notes</div>
-                  <div class="userNotes-author">by John Doe</div>
+              <div className="userNotes-information-container">
+                <div className="userNotes-top">
+                  <div className="userNotes-title">Very Good Notes</div>
+                  <div className="userNotes-author">by John Doe</div>
                 </div>
-                <div class="userNotes-bottom">
-                  <div class="userNotes-description">
+                <div className="userNotes-bottom">
+                  <div className="userNotes-description">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Odit nam esse laboriosam totam ut, similique omnis natus
                     officiis deserunt cumque minus magnam accusantium molestiae.
@@ -34,8 +34,8 @@ const UserNotes = () => {
                   </div>
                 </div>
               </div>
-              <div class="userNotes-open-container">
-                <button class="userNotes-open-btn">Open</button>
+              <div className="userNotes-open-container">
+                <button className="userNotes-open-btn">Open</button>
               </div>
             </section>
           </div>

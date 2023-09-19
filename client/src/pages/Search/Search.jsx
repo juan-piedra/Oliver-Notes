@@ -64,13 +64,16 @@ const Search = () => {
         <>
           {(window.currentLocation = "/Search" ? <Navbar /> : null)}
           <main>
+
             <form className="search-main" onSubmit={handleFormSubmit}>
+
               <section className="search-left-side">
                 <div className="search-container">
                   <select
                     id="schoolVal"
                     className="search form-select"
                     aria-label="Default select example"
+
                     onChange={handleInputChange}
                     name="SchoolId"
                     value={formData.SchoolId}
@@ -83,6 +86,8 @@ const Search = () => {
                         <option value={school._id} key={school._id}>
                           {school.schoolName}
                         </option>
+
+                  
                       );
                     })}
                   </select>
@@ -92,6 +97,7 @@ const Search = () => {
                     id="classVal"
                     className="search form-select"
                     aria-label="Default select example"
+
                     onChange={handleInputChange}
                     name="classId"
                     value={formData.classId}
@@ -104,6 +110,8 @@ const Search = () => {
                         {classItem.className}
                       </option>
                     ))}
+
+            
                   </select>
                 </div>
                 <Link to="/AddClass">
@@ -111,9 +119,12 @@ const Search = () => {
                 </Link>
               </section>
               <section className="search-right-side">
+
                 <button className="search-btn" type="submit">
                   Show Me The Notes!
                 </button>
+
+             
               </section>
             </form>
           </main>
