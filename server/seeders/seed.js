@@ -29,23 +29,19 @@ db.once('open', async () => {
             }]
         const newClassesArr = [
             {
-                className: "history102",
+                className: "History 102",
                 notes: []
             },
             {
-                className: "history101",
+                className: " Communications 101",
                 notes: []
             },
             {
-                className: "history103",
+                className: "Math 103",
                 notes: []
             },
             {
-                className: "Math301",
-                notes: []
-            },
-            {
-                className: "fullStackbc101",
+                className: "Chemistry 301",
                 notes: []
             }
         ]

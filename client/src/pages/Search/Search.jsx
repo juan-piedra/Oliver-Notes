@@ -65,9 +65,7 @@ const Search = () => {
         <>
           {(window.currentLocation = "/Search" ? <Navbar /> : null)}
           <main>
-
             <form className="search-main" onSubmit={handleFormSubmit}>
-
               <section className="search-left-side">
                 <div className="search-container">
                   <select
@@ -109,8 +107,6 @@ const Search = () => {
                         {classItem.className}
                       </option>
                     ))}
-
-            
                   </select>
                 </div>
                 <Link to="/AddClass">
@@ -118,12 +114,11 @@ const Search = () => {
                 </Link>
               </section>
               <section className="search-right-side">
-
-                <button className="search-btn" type="submit">
-                  Show Me The Notes!
-                </button>
-
-             
+                <Link to='/Notes'>
+                  <button className="search-btn" type="submit">
+                    Show Me The Notes!
+                  </button>
+                </Link>
               </section>
             </form>
           </main>

@@ -112,7 +112,7 @@
 }
 
 .notes-price {
-    margin: 2rem;
+    margin: 1.5rem;
     font-size: 2em;
     font-weight: bold;
 }
@@ -124,8 +124,23 @@
     height: 2.5rem;
     width: 8rem;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 .notes-buy-now-btn:hover {
     background-color: #d7d7d7;
+}
+
+.notes-purchased {
+    background-color: #ffffff;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 8rem;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+
+.notes-purchased:hover {
+    cursor: default;
 }
