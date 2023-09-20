@@ -6,16 +6,19 @@ Oliver Notes is a premium crowdsourcing service for college students looking to 
 
 ## Technologies Used
 
-- Node.js
+- (MERN)
+- MongoDB
 - Express.js
 - React
-- MongoDB
+- Node.js
 - GraphQL
 - Nodemon.js
-- MERN
 - Heroku
 - Github
 - HTML, CSS & Javascript
+- Mongoose ODM
+- Nodemon.js
+- Github
 - MySQL2 and the Sequelize ORM for the database.
 - GET route
 - POST route
