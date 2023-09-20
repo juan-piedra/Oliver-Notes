@@ -4,7 +4,7 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js",
+        "start": "node --max-old-space-size=4096 server.js",
         "watch": "nodemon server.js",
         "seed": "node seeders/seed.js"
     },
