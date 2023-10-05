@@ -14,14 +14,12 @@ Oliver Notes is a premium crowdsourcing service for college students looking to 
 - GraphQL
 - Nodemon.js
 - Heroku
-- Github
 - HTML, CSS & Javascript
 - Mongoose ODM
-- Nodemon.js
 - Github
 - MySQL2 and the Sequelize ORM for the database.
-- GET route
-- POST route
+- CRUD
+- JWT Authentication
 
 
 ## Links
